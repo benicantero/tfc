@@ -30,4 +30,12 @@ export class ArticulosService {
     return this.db.collection<Articulo>(this.articulos).add(articulo);
   }
 
+  getArticulo(id){
+    return this.db.collection(this.articulos).doc(id).snapshotChanges();
+  }
+
+  editArticulo(articulo: Articulo){
+    return this.db.collection<Articulo>(this.articulos).doc(articulo.id).set(articulo);
+  }
+
 }

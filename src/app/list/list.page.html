@@ -13,14 +13,14 @@
 
   <ion-list>
     <ion-item>
-      <ion-label>Descripción</ion-label>
+      <ion-label >Descripción</ion-label>
       <ion-label>Categoría</ion-label>
       <ion-label>Tipo</ion-label>
       <ion-label>Cantidad</ion-label>
     </ion-item>
 
     <ion-item *ngFor="let articulo of articulos | async">
-      <ion-label>{{articulo.descripcion}}</ion-label>
+      <ion-label [routerLink]="['/update']">{{articulo.descripcion}}</ion-label>
       <ion-label>{{articulo.categoria}}</ion-label>
       <ion-label>{{articulo.tipo}}</ion-label>
       <ion-label>{{articulo.cantidad}}</ion-label>

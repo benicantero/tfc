@@ -1,5 +1,5 @@
 export class Articulo {
-    id?: number;
+    id?: string;
     descripcion: string;
     categoria: string;
     tipo: string;
