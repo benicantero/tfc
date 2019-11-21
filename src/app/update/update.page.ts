@@ -1,6 +1,6 @@
-import { ArticulosService } from './../servicios/articulos.service';
+import { MedicamentosService } from '../servicios/medicamentos.service';
 import { Component, OnInit } from '@angular/core';
-import { Articulo } from '../modelos/articulo';
+import { Medicamento } from '../modelos/medicamento';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,24 +10,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UpdatePage implements OnInit {
 
-  articulo: Articulo;
+  medicamento: Medicamento;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private service: ArticulosService) { }
+    private service: MedicamentosService) { }
 
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
-    this.service.getArticulo(id).subscribe(
-      (articulo)=>{articulo;}
+    this.service.getMedicamento(id).subscribe(
+      (medicamento)=>{medicamento;}
     )
   }
- modificarArticulo() {
-    let art: Articulo = {id: this.articulo.id,
-              descripcion: this.articulo.descripcion,
-              categoria: this.articulo.categoria, tipo: this.articulo.tipo,
-              cantidad: this.articulo.cantidad};
-    this.service.editArticulo(art).then(
+ modificarMedicamento() {
+    let med: Medicamento = {id: this.medicamento.id,
+              nombre: this.medicamento.nombre,
+              cantidad: this.medicamento.cantidad, 
+              tomas: this.medicamento.tomas,
+              foto: this.medicamento.foto};
+    this.service.editMedicamento(med).then(
         () => {this.router.navigateByUrl('/list');}
     );
  }

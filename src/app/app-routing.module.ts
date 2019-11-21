@@ -15,11 +15,14 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-
   {
     path: 'create',
-   loadChildren: './create/create.module#CreatePageModule' },
-  { path: 'update', loadChildren: './update/update.module#UpdatePageModule' }
+   loadChildren: './create/create.module#CreatePageModule' 
+  },
+  { 
+    path: 'update', 
+    loadChildren: './update/update.module#UpdatePageModule' 
+  }
 ];
 
 @NgModule({

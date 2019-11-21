@@ -1,7 +1,7 @@
 {
-  "name": "Almacen",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
+    "name": "Mi Pill Box",
+    "integrations": {
+        "cordova": {}
+    },
+    "type": "angular"
 }

@@ -16,12 +16,12 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Listado De Artículos',
+      title: 'Ver mis medicamentos',
       url: '/list',
       icon: 'list'
     },
     {
-      title: 'Añadir Artículo',
+      title: 'Añadir Toma',
       url: '/create',
       icon: 'add'
     }

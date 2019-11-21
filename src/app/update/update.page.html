@@ -1,29 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Actualizar Artículo de tu Alcén</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Modificar Toma</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-item>
-        <ion-label position="fixed">Descripcion</ion-label>
-        <ion-input placeholder="Descripción Artículo" [(ngModel)] = "articulo.descripcion"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label position="fixed">Categoria</ion-label>
-        <ion-input placeholder="P. ej: Frescos, Perecederos, Bebidas..." [(ngModel)] = "articulo.categoria"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label position="fixed">Tipo</ion-label>
-        <ion-input placeholder="P. ej: Cervezas, refrescos, Snacks, Fruta, Verdura..."[(ngModel)] = "articulo.tipo"></ion-input>
+        <ion-label position="fixed">Nombre</ion-label>
+        <ion-input placeholder="Nombre medicamento" [(ngModel)]="medicamento.nombre"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label position="fixed">Cantidad</ion-label>
-        <ion-input placeholder="1,2,3..." type="number"[(ngModel)] = "articulo.cantidad"></ion-input>
+        <ion-input placeholder="P. ej: 1,2,2 ml, ...." [(ngModel)]="medicamento.cantidad"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed">Tomas</ion-label>
+        <ion-input placeholder="P. ej: 1 al dia, cada 12h,..." [(ngModel)]="medicamento.tomas"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed">Foto</ion-label>
+        <ion-input [(ngModel)]="medicamento.foto"></ion-input>
     </ion-item>
 
-    
+
     <ion-button (click)="modificarArticulo()">Modicar</ion-button>
-      
-  
+
+
 </ion-content>

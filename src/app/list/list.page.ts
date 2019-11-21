@@ -1,4 +1,4 @@
-import { ArticulosService } from './../servicios/articulos.service';
+import { MedicamentosService } from '../servicios/medicamentos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  articulos;
+  medicamentos;
 
   private selectedItem: any;
   private icons = [
@@ -26,12 +26,12 @@ export class ListPage implements OnInit {
   public items: Array<{ title: string; note: string; icon: string }> = [];
   constructor(
     private router: Router,
-    private articuloService: ArticulosService
+    private medicamentoService: MedicamentosService
   ) {
   }
 
   ngOnInit() {
-    this.articulos = this.articuloService.getArticulos();
+    this.medicamentos = this.medicamentoService.getMedicamentos();
 
 }
 }

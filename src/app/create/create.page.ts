@@ -1,5 +1,5 @@
-import { Articulo } from './../modelos/articulo';
-import { ArticulosService } from './../servicios/articulos.service';
+import { Medicamento } from '../modelos/medicamento';
+import { MedicamentosService } from '../servicios/medicamentos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -10,27 +10,27 @@ import { Router } from '@angular/router';
 })
 export class CreatePage implements OnInit {
 
-  articulo: Articulo = {descripcion: '', categoria: '', tipo: '', cantidad: null};
+  medicamento: Medicamento = {nombre: '', cantidad: '', tomas: '', foto: null};
 
 
   constructor(
     private router: Router,
-    private articuloFirestore: ArticulosService) { }
+    private medicamentoFirestore: MedicamentosService) { }
 
 
   ngOnInit() {
   }
 
-nuevoArticulo() {
-  let articulo: Articulo = {
-      descripcion : this.articulo.descripcion,
-      categoria : this.articulo.categoria,
-      tipo: this.articulo.tipo,
-      cantidad: this.articulo.cantidad
+nuevoMedicamento() {
+  let medicamento: Medicamento = {
+      nombre : this.medicamento.nombre,
+      cantidad : this.medicamento.cantidad,
+      tomas: this.medicamento.tomas,
+      foto: this.medicamento.foto
     };
 
-  this.articuloFirestore.altaArticulo(articulo).then(
-      () => this.router.navigate(['articulos'])
+  this.medicamentoFirestore.altaMedicamento(medicamento).then(
+      () => this.router.navigate(['medicamentos'])
 );
   }
 }

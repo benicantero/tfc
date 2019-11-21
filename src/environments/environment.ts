@@ -5,12 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDE7hM1VVB4s4kmQnSDyQthmFVzVdNf3pw',
-    authDomain: 'almacenionic.firebaseapp.com',
-    databaseURL: 'https://almacenionic.firebaseio.com',
-    projectId: 'almacenionic',
-    storageBucket: 'almacenionic.appspot.com',
-    messagingSenderId: '955396059548'
+    apiKey: 'AIzaSyAF_6mYx5exkQ3wlsnHimcBVbVllzlUmW8',
+    authDomain: 'my-pill-box.firebaseapp.com',
+    databaseURL: 'https://my-pill-box.firebaseio.com',
+    projectId: 'my-pill-box',
+    storageBucket: 'my-pill-box.appspot.com',
+    messagingSenderId: '586290229740',
+    appId: '1:586290229740:web:7ee9decf06362fa987d0c9'
   }
 };
 
