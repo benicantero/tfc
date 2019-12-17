@@ -5,15 +5,17 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAF_6mYx5exkQ3wlsnHimcBVbVllzlUmW8',
-    authDomain: 'my-pill-box.firebaseapp.com',
-    databaseURL: 'https://my-pill-box.firebaseio.com',
-    projectId: 'my-pill-box',
-    storageBucket: 'my-pill-box.appspot.com',
-    messagingSenderId: '586290229740',
-    appId: '1:586290229740:web:7ee9decf06362fa987d0c9'
+    apiKey: "AIzaSyA8rgsmfXg25bMuqgnd5vBEGsnNXtAPZtQ",
+    authDomain: "my-pill-box-d4d1e.firebaseapp.com",
+    databaseURL: "https://my-pill-box-d4d1e.firebaseio.com",
+    projectId: "my-pill-box-d4d1e",
+    storageBucket: "my-pill-box-d4d1e.appspot.com",
+    messagingSenderId: "108967355597",
+    appId: "1:108967355597:web:7a2fdba6945d9ccc003584",
+    measurementId: "G-G47ZZ5Z91W"
   }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

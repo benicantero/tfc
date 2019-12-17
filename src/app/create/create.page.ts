@@ -30,7 +30,7 @@ nuevoMedicamento() {
     };
 
   this.medicamentoFirestore.altaMedicamento(medicamento).then(
-      () => this.router.navigate(['medicamentos'])
+      () => this.router.navigate(['list'])
 );
   }
 }
