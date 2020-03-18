@@ -20,7 +20,7 @@
         </ion-item>
 
         <ion-item *ngFor="let medicamento of medicamentos | async">
-            <ion-label [routerLink]="['/update']">{{medicamento.nombre}}</ion-label>
+            <ion-label [routerLink]="['/update/',medicamento.id]">{{medicamento.nombre}}</ion-label>
             <ion-label>{{medicamento.cantidad}}</ion-label>
             <ion-label>{{medicamento.tomas}}</ion-label>
             <ion-label>{{medicamento.foto}}</ion-label>

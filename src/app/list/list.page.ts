@@ -1,8 +1,7 @@
-import { Observable } from 'rxjs';
 import { MedicamentosService } from '../servicios/medicamentos.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Medicamento } from '../modelos/medicamento';
+
 
 @Component({
   selector: 'app-list',

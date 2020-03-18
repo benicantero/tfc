@@ -20,7 +20,7 @@ const routes: Routes = [
    loadChildren: './create/create.module#CreatePageModule' 
   },
   { 
-    path: 'update', 
+    path: 'update/:id', 
     loadChildren: './update/update.module#UpdatePageModule' 
   }
 ];

@@ -1,6 +1,6 @@
 import { Medicamento } from '../modelos/medicamento';
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -9,15 +9,15 @@ import { Observable } from 'rxjs';
 })
 export class MedicamentosService {
 
-  private medicamentos: AngularFirestoreCollection<Medicamento>;
-  private meds: Observable<Medicamento[]>;
+  medicamentos = 'medicamentos';
 
-  constructor(private db: AngularFirestore) {
-    this.medicamentos = this.db.collection<Medicamento>('pastillero');
+  constructor(private db:AngularFirestore){}
 
-    this.meds = this.medicamentos.snapshotChanges().pipe(map(
-      medicamentos => {
-        return medicamentos.map(medicamento => {
+  getMedicamentos(): Observable<Medicamento[]> {
+    return this.db.collection<Medicamento>(this.medicamentos).snapshotChanges().pipe(
+      map( medicamentos => {
+        return medicamentos.map(
+          medicamento => {
             const data = medicamento.payload.doc.data();
             const key = medicamento.payload.doc.id;
             return {id: key, ...data};
@@ -25,22 +25,22 @@ export class MedicamentosService {
         );
       })
     );
-   }
-
-  getMedicamentos(){
-    return this.meds;
   }
-
+  
   altaMedicamento(medicamento: Medicamento) {
-    return this.medicamentos.add(medicamento);
+    return this.db.collection<Medicamento>(this.medicamentos).add(medicamento);
   }
 
   getMedicamento(id){
-    return this.medicamentos.doc(id).snapshotChanges();
+    return this.db.collection(this.medicamentos).doc(id).get();
   }
 
   editMedicamento(medicamento: Medicamento){
-    return this.medicamentos.doc(medicamento.id).set(medicamento);
+    return this.db.collection<Medicamento>(this.medicamentos).doc(medicamento.id).set(medicamento);
+  }
+
+  borrarMedicamento(medicamento: Medicamento){
+    return this.db.collection<Medicamento>(this.medicamentos).doc(medicamento.id).delete();
   }
 
 }

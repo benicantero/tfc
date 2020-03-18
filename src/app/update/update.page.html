@@ -1,29 +1,33 @@
 <ion-header>
     <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
         <ion-title>Modificar Toma</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-item>
-        <ion-label position="fixed">Nombre</ion-label>
+        <ion-label position="fixed"> <b>Nombre</b></ion-label>
         <ion-input placeholder="Nombre medicamento" [(ngModel)]="medicamento.nombre"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="fixed">Cantidad</ion-label>
+        <ion-label position="fixed"><b>Cantidad</b></ion-label>
         <ion-input placeholder="P. ej: 1,2,2 ml, ...." [(ngModel)]="medicamento.cantidad"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="fixed">Tomas</ion-label>
+        <ion-label position="fixed"><b>Tomas</b></ion-label>
         <ion-input placeholder="P. ej: 1 al dia, cada 12h,..." [(ngModel)]="medicamento.tomas"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="fixed">Foto</ion-label>
+        <ion-label position="fixed"><b>Foto</b></ion-label>
         <ion-input [(ngModel)]="medicamento.foto"></ion-input>
     </ion-item>
 
 
     <ion-button (click)="modificarMedicamento()">Modicar</ion-button>
 
+    <ion-button (click)="borrarMedicamento()">Borrar</ion-button>
 
 </ion-content>
