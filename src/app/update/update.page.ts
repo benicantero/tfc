@@ -24,7 +24,7 @@ export class UpdatePage implements OnInit {
         this.medicamento.nombre = medicamento.get('nombre');
         this.medicamento.cantidad = medicamento.get('cantidad');
         this.medicamento.tomas = medicamento.get('tomas');
-        this.medicamento.cantidad = medicamento.get('foto');
+        this.medicamento.foto = medicamento.get('foto');
       }
     );
   }
