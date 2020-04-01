@@ -16,13 +16,25 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   {
+    path:'listM',
+    loadChildren:'./listM/list.module#ListMPageModule'
+  },
+  {
+    path: 'createM',
+   loadChildren: './createM/create.module#CreateMPageModule' 
+  },
+  {
     path: 'create',
    loadChildren: './create/create.module#CreatePageModule' 
   },
   { 
     path: 'update/:id', 
     loadChildren: './update/update.module#UpdatePageModule' 
-  }
+  },
+  {
+    path: 'updateM/:id', 
+    loadChildren: './updateM/update.module#UpdateMPageModule'
+  }  
 ];
 
 @NgModule({

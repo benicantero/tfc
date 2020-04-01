@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Añadir Medicina</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="fixed">Nombre</ion-label>
+        <ion-input placeholder="Nombre de la medicina" [(ngModel)]="medicina.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed">Foto</ion-label>
+        <ion-input placeholder="Foto del medicamento" [(ngModel)]="medicina.foto"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="nuevaMedicina()">
+        Añadir
+        <ion-icon slot="end" name="add"></ion-icon>
+    </ion-button>
+
+
+</ion-content>
