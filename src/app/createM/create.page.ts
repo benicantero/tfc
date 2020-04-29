@@ -31,4 +31,7 @@ nuevaMedicina() {
       () => this.router.navigate(['listM'])
 );
   }
+
+  salir(){this.router.navigate(['listM']);}
+
 }

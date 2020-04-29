@@ -33,4 +33,5 @@ nuevoMedicamento() {
       () => this.router.navigate(['list'])
 );
   }
+  salir(){this.router.navigate(['list']);}
 }
