@@ -5,6 +5,10 @@ import { Router } from '@angular/router';
 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
+import { AngularFireStorage } from '@angular/fire/storage';
+
+import { LoadingController, AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.page.html',
@@ -15,11 +19,16 @@ export class CreatePage implements OnInit {
   medicina: Medicina = { nombre: '', foto: null };
 
   image = 'https://www.kasterencultuur.nl/editor/placeholder.jpg';
+  imagePath: string; // direccion de la imagen en firebase
+  upload: any;
 
   constructor(
     private router: Router,
     private medicinaFirestore: MedicinasService,
-    private camera: Camera
+    private camera: Camera,
+    public loadingController: LoadingController,
+    public alertController: AlertController,
+    public afSG: AngularFireStorage
   ) { }
 
 
@@ -62,6 +71,26 @@ export class CreatePage implements OnInit {
     };
     return await this.camera.getPicture(options);
   }
+
+  async uploadFirebase() {
+    const loading = await this.loadingController.create();
+    await loading.present();
+    this.imagePath = new Date().getTime() + '.jpg';
+
+    this.upload = this.afSG.ref(this.imagePath).putString(this.image, 'data_url');
+    this.upload.then(async () => {
+      this.image = 'https://www.kasterencultuur.nl/editor/placeholder.jpg';
+      await loading.dismiss();
+      const alert = await this.alertController.create({
+        header: '',
+        message: 'La foto se ha seleccionado correctamente',
+        buttons: ['OK']
+      });
+      await alert.present();
+    });
+
+  }
+
 
   nuevaMedicina() {
     let medicina: Medicina = {

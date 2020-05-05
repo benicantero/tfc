@@ -1,7 +1,8 @@
 {
-    "name": "Mi Pill Box",
-    "integrations": {
-        "cordova": {}
-    },
-    "type": "angular"
+  "name": "Mi Pill Box",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
 }
