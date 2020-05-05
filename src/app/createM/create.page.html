@@ -1,6 +1,11 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Añadir Medicina</ion-title>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Añadir medicina
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -29,10 +34,6 @@
         <ion-icon slot="start" name="cloud-upload"></ion-icon>
         Seleccionar la foto
     </ion-button>
-    <ion-item>
-        <ion-label position="fixed">Foto</ion-label>
-        <ion-input placeholder="Foto del medicamento" [(ngModel)]="medicina.foto"></ion-input>
-    </ion-item>
 
     <ion-button (click)="nuevaMedicina()">
         Añadir
