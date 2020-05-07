@@ -11,28 +11,57 @@
 
 <ion-content>
     <ion-item>
-        <ion-label position="fixed">Nombre Medicamento</ion-label>
-        <ion-input placeholder="Introduce el nombre del medicamento" [(ngModel)]="medicamento.nombre"></ion-input>
+        <ion-label>Medicina</ion-label>
+        <ion-select multiple="true" cancelText="CANCEL" okText="OK">
+            <ion-select-option value="medicina1">Medicina1</ion-select-option>
+            <ion-select-option value="medicina2">Medicina2</ion-select-option>
+            <ion-select-option value="medicina3">Medicina3</ion-select-option>
+            <ion-select-option value="medicina4">Medicina4</ion-select-option>
+            <ion-select-option value="medicina5">Medicina5</ion-select-option>
+            <ion-select-option value="medicina6">Medicina6</ion-select-option>
+            <ion-select-option value="medicina7">Medicina7</ion-select-option>
+            <ion-select-option value="medicina8">Medicina8</ion-select-option>
+            <ion-select-option value="medicina9">Medicina9</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <div class="flex">
+        <div class="img-box">
+            <img [src]="image">
+        </div>
+    </div>
+
+    <div class="flex_text ">
+        <ion-label position=" center ">POSOLOGÍA</ion-label>
+    </div>
+
+    <ion-item>
+        <ion-label position="fixed ">Cantidad</ion-label>
+        <ion-input placeholder="P. ej: 1, 1/2, 2ml, etc " [(ngModel)]="medicamento.cantidad "></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="fixed">Cantidad</ion-label>
-        <ion-input placeholder="P. ej: 1, 1/2, 2ml, etc" [(ngModel)]="medicamento.cantidad"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label position="fixed">Tomas al dia</ion-label>
-        <ion-input placeholder="P. ej: Cada 8 horas" [(ngModel)]="medicamento.tomas"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label position="fixed">Foto</ion-label>
-        <ion-input placeholder="aqui la foto" [(ngModel)]="medicamento.foto"></ion-input>
+        <ion-label>Posoligía</ion-label>
+        <ion-select multiple="true " cancelText="CANCEL " okText="OK ">
+            <ion-select-option value="ps1">Cada hora</ion-select-option>
+            <ion-select-option value="ps1">Cada 2 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 4 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 6 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 8 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 10 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 12 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 14 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 16 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 18 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 20 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 22 horas</ion-select-option>
+            <ion-select-option value="ps1">Cada 24 horas</ion-select-option>
+        </ion-select>
     </ion-item>
 
-
-    <ion-button (click)="nuevoMedicamento()">
+    <ion-button (click)="nuevoMedicamento() ">
         Añadir
-        <ion-icon slot="end" name="add"></ion-icon>
+        <ion-icon slot="end " name="add "></ion-icon>
     </ion-button>
-    <ion-button (click)="salir()" color="warning">
+    <ion-button (click)="salir() " color="warning ">
         Salir
         <ion-icon slot="end " name="add "></ion-icon>
     </ion-button>

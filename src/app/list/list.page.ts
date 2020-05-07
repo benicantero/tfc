@@ -35,4 +35,5 @@ export class ListPage implements OnInit {
   ngOnInit() {
     this.medicamentos = this.medicamentoService.getMedicamentos();
 }
+salir() { this.router.navigate(['home']); }
 }

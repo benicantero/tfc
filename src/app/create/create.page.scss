@@ -1,0 +1,21 @@
+.flex {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-box {
+    height: 200px;
+    overflow: hidden;
+}
+
+img {
+    height: 200px;
+}
+
+.flex_text {
+    color: rgb(126, 80, 80);
+    text-align: center;
+    justify-content: center;
+    font-size: 2rem;
+}

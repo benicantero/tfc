@@ -85,22 +85,27 @@ export class CreatePage implements OnInit {
         header: '',
         message: 'La foto se ha seleccionado correctamente',
         buttons: ['OK']
-      });
+      }
+      );
       await alert.present();
     });
-
-  }
-
-
-  nuevaMedicina() {
     let medicina: Medicina = {
       nombre: this.medicina.nombre,
       foto: this.medicina.foto
-    };
+  }
+
+
+  /*nuevaMedicina() {
+    let medicina: Medicina = {
+      nombre: this.medicina.nombre,
+      foto: this.medicina.foto
+    };*/
 
     this.medicinaFirestore.altaMedicina(medicina).then(
       () => this.router.navigate(['listM'])
     );
+  
+  
   }
 
   salir() { this.router.navigate(['listM']); }

@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class CreatePage implements OnInit {
 
   medicamento: Medicamento = {nombre: '', cantidad: '', tomas: '', foto: null};
+  image = 'https://www.kasterencultuur.nl/editor/placeholder.jpg';
 
 
   constructor(

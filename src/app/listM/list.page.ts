@@ -34,4 +34,5 @@ export class ListPage implements OnInit {
     this.medicinas = this.medicinaService.getMedicinas();
 
 }
+salir() { this.router.navigate(['home']); }
 }
